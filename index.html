@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Julie Bartz</title>
     <link rel="stylesheet" href="style.css">
-    <script src="scripts/about.js"></script>
     <script src="https://kit.fontawesome.com/d45703114b.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -14,13 +13,15 @@
         <div class="container">
             <nav>
                 <img src="images/logo.png" class="logo">
-                <ul>
+                <ul id="sidemenu">
                     <li><a href="#">Home</a></li>
                     <li><a href="#">About</a></li>
                     <li><a href="#">Services</a></li>
                     <li><a href="#">Portfolio</a></li>
                     <li><a href="#">Contact</a></li>
+                    <i class="fas fa-solid fa-x"></i>
                 </ul>
+                <i class="fas fa-solid fa-bars"></i>
             </nav>
             <div class="header-text">
                 <p>Custom Designer</p>
@@ -37,11 +38,20 @@
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me</h1>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam at tempore itaque sapiente eos veritatis soluta repudiandae sunt praesentium, doloribus officiis et non consectetur, molestias tempora necessitatibus voluptatum rerum deleniti a. Facere optio quo sequi similique repellendus rem, iusto vitae delectus et doloribus aliquid consequatur, modi adipisci. Accusamus laborum ab doloremque odit placeat architecto praesentium magnam saepe rerum ratione voluptatibus quaerat, soluta ad provident? Illum dignissimos quod aliquam. Illo sed doloremque accusantium ipsum praesentium nobis tempore, minus illum voluptatum. Sint, reiciendis nobis similique incidunt at autem cupiditate aliquid facere dolore, tempora quae ea fugit? A distinctio natus fugiat nulla veniam!</p>
+                    <p>
+                        Hey there, I'm Julie Bartz, the creative mind behind JB Designs! By day, 
+                        I'm in the classroom shaping young minds as a second-grade teacher, but when the school day ends, 
+                        I dive into the world of crafting at my home in Livingston, Montana. <br><br>
+                        I use many tools such as my Cricut and sublimation to turn ordinary items into personalized treasures. 
+                        From tumblers to earrings, mugs to shirts, each piece is made with care and a touch of Montana charm. <br><br>
+                        I'm a proud graduate of Montana State University in Bozeman, and my love for both crafting and education runs deep.
+                        I'm always looking for new projects and ideas, so feel free to reach out and let me know what you're looking for!
+                        Thanks for stopping by JB Designs, let's make something special together!
+                    </p>
                     <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
-                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                        <p class="tab-links active-link" onclick="opentab(event, 'skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab(event, 'experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab(event, 'education')">Education</p>
                     </div>
                     <div class="tab-contents active-tab" id="skills">
                         <ul>
@@ -99,19 +109,64 @@
     <!-- ------------portfolio------------ -->
     <div id="portfolio">
         <div class="container">
-            <h1 class="sub-title">My Projects</h1>
+            <h1 class="sub-title">Most Popular</h1>
             <div class="work-list">
                 <div class="work">
-                    <img src="images/work-1.jpg">
+                    <img src="images/slate.jpeg">
+                    <div class="layer">
+                        <h3>Photo Slates</h3>
+                        <p>Custom slates for any of your special photos!</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
                 </div>
                 <div class="work">
-                    <img src="images/work-2.jpg">
+                    <img src="images/bakingkit.jpg">
+                    <div class="layer">
+                        <h3>Custom Kits</h3>
+                        <p>Put together a custom kit, perfect for gifts!</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
                 </div>
                 <div class="work">
-                    <img src="images/work-3.jpg">
+                    <img src="images/tumbler.jpeg">
+                    <div class="layer">
+                        <h3>Tumblers</h3>
+                        <p>Craft the perfect tumbler!</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- ------------contact------------ -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i> teacherbartz@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i> 406-223-7244</p>
+                    <div class="social-icons">
+                        <a href=""><i class="fa-brands fa-facebook"></i></a>
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                    <a href="" class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="your email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button class="btn btn2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 Julie Bartz | All Rights Reserved</p>
+        </div>
+    </div>
+    <script src="scripts/about.js"></script>
 </body>
 </html>
